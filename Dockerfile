@@ -8,4 +8,4 @@ RUN chmod +x mvnw && ./mvnw clean package -DskipTests
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "java -Dserver.port=${PORT:-8080} -jar target/*.jar"]
+CMD ["sh", "-c", "java -Dserver.port=${PORT:-8080} -Dspring.profiles.active=render -jar target/*.jar"]
